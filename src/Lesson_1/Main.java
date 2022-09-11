@@ -23,9 +23,14 @@ public class Main<T> {
         Orange orange2 = new Orange();
 
         Box<Apple> box = new Box<>(apple1, apple2);
+        Box<Apple> box2 = new Box<>();
         Box<Orange> box1 = new Box<>(orange1, orange2);
-        box.add(apple3,apple4);
+        box.add(apple3, apple4);
+
         System.out.println(box.compare(box1));
+        box.shiftFruits(box2);
+
+        System.out.println(box2.getSize());
 
 
     }
@@ -41,7 +46,6 @@ public class Main<T> {
     public static <T> ArrayList<T> toArrayList(T[] arr) {
         return new ArrayList<T>(Arrays.asList(arr));
     }
-
 
 
 }

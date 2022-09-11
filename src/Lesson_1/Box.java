@@ -21,6 +21,10 @@ public class Box<T extends Fruit> {
         return this.getWeight() == box.getWeight();
     }
 
+    public int getSize(){
+        return items.size();
+    }
+
     public int getWeight() {
         if (items.size() == 0) {
             return 0;
@@ -32,9 +36,9 @@ public class Box<T extends Fruit> {
         return weight;
     }
 
-
-    public void shiftFruits(){
-
+    public void shiftFruits(Box<T> box){
+      box.items.addAll(this.items);
+      items.clear();
     }
 
 }
