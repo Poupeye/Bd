@@ -37,7 +37,10 @@ public class Box<T extends Fruit> {
     }
 
     public void shiftFruits(Box<T> box){
-      box.items.addAll(this.items);
+//      box.items.addAll(this.items);
+        for (T b:items) {
+            box.add(b);
+        }
       items.clear();
     }
 
